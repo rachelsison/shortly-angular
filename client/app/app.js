@@ -26,7 +26,7 @@ angular.module('shortly', [
       authenticate: true
     })
     .otherwise({
-      redirectTo: '/shortened.link',
+      redirectTo: '/shorten',
       authenticate: true
     })
 

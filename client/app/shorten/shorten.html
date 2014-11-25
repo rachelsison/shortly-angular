@@ -1,5 +1,9 @@
-<div id='container'>
+<div id='container' ng-controller="ShortenController">
 <!-- Your code here -->
+<form method='post'>
+  Link to Shorten: <input ng-model='newLink' type="text"><br>
+  <input type="submit" ng-click="addLink(newLink)" value="submitLink">
+  </form>
 
 </div>
 
