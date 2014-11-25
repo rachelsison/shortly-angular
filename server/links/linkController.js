@@ -43,6 +43,7 @@ module.exports = {
     }
 
     var createLink = Q.nbind(Link.create, Link);
+
     var findLink = Q.nbind(Link.findOne, Link);
 
     findLink({url: url})
@@ -66,6 +67,7 @@ module.exports = {
       })
       .then(function (createdLink) {
         if (createdLink) {
+          console.log(createdLink);
           res.json(createdLink);
         }
       })
