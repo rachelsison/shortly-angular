@@ -1,10 +1,10 @@
 angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
-  var data = {links:[]};
+  var data = {};
   var getLinks = function(link){
-    data.links.push(link);
-    console.log("Called getLinks");
+    data.url = link;
+    console.log(data.url.hostname);
     return $http({
       method: 'POST',
       url: '/api/links',

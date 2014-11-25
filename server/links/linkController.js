@@ -33,8 +33,11 @@ module.exports = {
   },
 
   newLink: function (req, res, next) {
-    var url = req.body.links[0];
-    console.log(req.body.links[0]);
+    var url = req.body.url;
+    if(url.slice(0, 7) !== 'http://'){
+      url = 'http://' + url;
+    }
+    console.log(req.body.url);
     if (!util.isValidUrl(url)) {
       return next(new Error('Not a valid url'));
     }
@@ -45,7 +48,7 @@ module.exports = {
     findLink({url: url})
       .then(function (match) {
         if (match) {
-          res.status('202').send(match);
+          res.status(202).send(match);
         } else {
           return  util.getUrlTitle(url);
         }
