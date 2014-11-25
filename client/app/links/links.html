@@ -1,3 +1,7 @@
-<div id='container'>
+<div id='container' ng-controller='LinksController'>
   <!-- Your html here -->
+<form method='post'>
+  Link to Shorten: <input ng-model='newLink' type="text"><br>
+  <input type="submit" ng-click="getLinks(newLink)" value="submitLink">
+  </form>
 </div>
