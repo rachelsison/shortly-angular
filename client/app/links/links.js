@@ -1,8 +1,9 @@
 angular.module('shortly.links', [])
 
-.controller('LinksController', function ($scope, Links) {
+.controller('LinksController', function ($scope, Links, $location) {
 
   angular.extend($scope, Links);
-  Links.getLinks();
+  $scope.getLinks();
+  console.log($location)
 });
 
