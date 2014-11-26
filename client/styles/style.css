@@ -3,6 +3,12 @@ body {
   margin-top: 10px;
   font-family: arial, sans-serif;
 }
+.shortening {
+  position: fixed;
+  left: 500px;
+  top: 300px;
+
+}
 
 a {
   color: #333;
